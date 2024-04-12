@@ -29,7 +29,7 @@ li {
 }
 
 body {
-  background: #ff9d4c;
+  background: #6bdcec;
   overflow-x: hidden;
 }
 
@@ -202,6 +202,7 @@ h3 {
   background-size: cover;
   background-position: top center;
   margin-top: -17vw;
+  /* filter: hue-rotate(160deg); */
 }
 
 .about .left {
@@ -242,6 +243,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* filter: hue-rotate(160deg); */
 }
 
 .tokenomics .content {
@@ -421,6 +423,7 @@ h3 {
   background-position: top center;
   background-size: cover;
   background-attachment: scroll;
+  /* filter: hue-rotate(160deg); */
 }
 
 .join p {
@@ -457,7 +460,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   gap: 1vw;
-  background: #e77c24 !important;
+  background: #6bdcec !important;
   padding-bottom: 2vw;
 }
 
@@ -568,6 +571,7 @@ h3 {
     background-size: cover;
     background-position: top center;
     margin-top: -35vw;
+    /* filter: hue-rotate(160deg); */
   }
 
   .about .left {

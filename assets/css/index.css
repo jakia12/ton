@@ -1,0 +1,837 @@
+@font-face {
+  font-family: demo;
+  src: url(../fonts/Comic\ Kings.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background: #ff9d4c;
+  overflow-x: hidden;
+}
+
+p {
+  color: #fff;
+  font-size: 1.2vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.8vw;
+  /* 136.842% */
+}
+
+h2 {
+  color: #fff;
+  text-shadow: 0px 2px 26px #865126, 0px 7px 10px rgba(0, 0, 0, 0.35);
+  transition: all 2s;
+  font-family: demo;
+  font-size: 2.7vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: #865126;
+}
+
+h3 {
+  color: #fff;
+  background-clip: text;
+  transition: all 2s;
+  background: transparent;
+  font-family: demo;
+  font-size: 2.7vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.btn {
+  border-radius: 1vw;
+  font-family: demo;
+  padding: 1vw 2vw;
+  color: #fff;
+  font-size: 1.3vw;
+  border: 0.5vw solid #fff;
+  transition: all 0.5s;
+  background: radial-gradient(66.7% 66.7% at 50% 50%, #26acdc 0%, #1e5e82 100%);
+}
+
+.btn:hover {
+  border-radius: 10vw;
+  /* color: #F0573B; */
+  border-color: #f8d789;
+  background: radial-gradient(66.7% 66.7% at 50% 50%, #f8d789 0%, #ee807b 100%);
+}
+
+.depth:before,
+.depth:after {
+  content: attr(title);
+  padding: 50px;
+  color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+}
+
+.depth:before {
+  top: 1px;
+  left: 1px;
+}
+
+.depth:after {
+  top: 2px;
+  left: 2px;
+}
+
+/*---------------------- website managemnet -------------
+--------------------*/
+
+.hero-section {
+  width: 100%;
+  height: 70vw;
+  padding: 2vw 15vw;
+  background-image: linear-gradient(#0000006a, #00000072),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.hero-section nav {
+  width: 100%;
+  padding: 2.5vw 3vw;
+  border-radius: 1.5vw;
+  background: rgba(255, 255, 255, 0.43);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-section .left {
+  display: flex;
+  align-items: center;
+  /* gap: 2vw; */
+  justify-content: space-around;
+  width: 30%;
+}
+
+.hero-section .left a {
+  color: #000;
+  line-height: 120%;
+  font-size: 1vw;
+  transition: all 0.3s;
+  z-index: 1000;
+}
+
+.hero-section .left a:hover {
+  text-decoration: underline;
+  color: #f0573b;
+  transform: translateY(-0.3vw);
+}
+
+.email,
+.email h6 {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+.hero-section .center {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-section .center img {
+  position: absolute;
+  width: 7.5vw;
+  animation: bounceInDown 0.7s;
+}
+
+.hero-section .left:nth-child(1) a:nth-child(1) {
+  animation: bounceInDown 1s;
+}
+
+.hero-section .left:nth-child(1) a:nth-child(2) {
+  animation: bounceInDown 1.2s;
+}
+
+.hero-section .left:last-child a:nth-child(1) {
+  animation: bounceInDown 1.4s;
+}
+
+.hero-section .left:last-child a:nth-child(2) {
+  animation: bounceInDown 1.6s;
+}
+
+/*------------------------ about-us ----------------
+-------------------*/
+
+.about {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 7vw;
+  padding-top: 19vw;
+  background: url(../images/about-bg.png);
+  background-size: cover;
+  background-position: top center;
+  margin-top: -17vw;
+}
+
+.about .left {
+  width: 50%;
+  text-align: center;
+}
+
+.about .left img {
+  width: 80%;
+  animation: zoomIn 1.5s;
+}
+
+.about .right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  align-items: flex-start;
+}
+
+.about .right p {
+  color: #000;
+}
+
+/*---------------- tokenomics -------------
+------------------*/
+
+.tokenomics {
+  width: 100%;
+  height: auto;
+  background: url(../images/token-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 70%;
+  background-position: top center;
+  background-attachment: scroll;
+  padding: 15vw;
+  padding-bottom: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tokenomics .content {
+  width: 100%;
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  padding-top: 3vw;
+}
+
+.tokenomics .content .left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #79c2fa;
+  border-radius: 1.5vw;
+  border: 0.7vw solid #fff;
+  width: 49%;
+  overflow: hidden;
+  padding-top: 3vw;
+}
+
+.tokenomics .content .left:nth-child(2) {
+  background: #f8d789;
+}
+
+.tokenomics .content .left .text {
+  width: 50%;
+  padding-left: 10%;
+}
+
+.tokenomics .content .left .text p {
+  font-size: 1.7vw;
+}
+
+.tokenomics .content .left .right {
+  width: 50%;
+  position: relative;
+}
+
+.tokenomics .content .left .right img {
+  width: 100%;
+}
+
+.tokenomics .content .left:nth-child(1) .right img {
+  margin-bottom: -1vw;
+  animation: zoomInRight 2s;
+}
+
+.tokenomics .content .left:nth-child(2) .right img {
+  position: relative;
+  animation: zoomInLeft 1.7s;
+  bottom: -2vw;
+}
+
+.tokenomics .box {
+  margin-top: 2vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ee807b;
+  border-radius: 1.5vw;
+  border: 0.7vw solid #fff;
+  padding: 1vw 2vw;
+}
+
+.tokenomics .box .left {
+  width: 40%;
+  padding-left: 5%;
+}
+
+.tokenomics .box .right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tokenomics .box .right img {
+  width: 100%;
+  margin-bottom: -3.3vw;
+}
+
+/*------------------------- roadmap ---------------
+--------------------*/
+
+.roadmap {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vw;
+  padding: 5vw 15vw;
+}
+
+.roadmap .content {
+  width: 100%;
+  height: auto;
+  padding: 3vw;
+  background: linear-gradient(180deg, #d284e6 0%, #0500ff 100%);
+  border-radius: 2vw;
+  border: 0.7vw solid #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+}
+
+.roadmap .content .phase {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.roadmap .content .phase:nth-child(4) .left img {
+  width: 16vw;
+  margin-left: -8vw;
+  margin-top: 0vw;
+}
+
+.roadmap .content .phase h6 {
+  font-family: Balsamiq Sans;
+  font-size: 1.4vw;
+  font-weight: 700;
+  list-style: 110%;
+  text-align: left;
+  color: #fff;
+}
+
+.roadmap .content .phase .left {
+  width: 25%;
+  text-align: center;
+}
+
+.roadmap .content .phase .left img {
+  width: 40%;
+  margin-top: -1vw;
+  margin-right: -19vw;
+  position: relative;
+  z-index: 1000;
+}
+
+.roadmap .content .phase .right {
+  width: 70%;
+  padding: 2vw;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.roadmap .content .phase .right li {
+  color: #fff;
+  line-height: 140%;
+}
+
+/*------------------------- contact ---------------
+--------------------*/
+
+.join {
+  width: 100%;
+  height: auto;
+  padding: 5vw;
+  padding-top: 10vw;
+  padding-bottom: 6vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+  background: url(../images/contact-bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.join p {
+  font-weight: 700;
+  font-size: 2vw;
+  color: #0b5079;
+}
+
+.join .content {
+  padding: 1vw 1.5vw;
+  background: #f0573b;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.join .content a img {
+  width: 3vw;
+  transition: all 0.3s;
+}
+
+.join .content a img:hover {
+  transform: translateY(-0.5vw);
+}
+
+/*---------------------------------- copyright --------------
+-----------------*/
+
+.copy {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+  background: #e77c24 !important;
+  padding-bottom: 2vw;
+}
+
+.copy img {
+  width: 7vw;
+  margin-top: -4vw;
+}
+
+/*--------------------- website-responsive -------------
+-----------------*/
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 7vw;
+  }
+
+  h3 {
+    font-size: 5vw;
+  }
+
+  p {
+    font-size: 3vw;
+    text-align: center;
+    line-height: 140%;
+  }
+
+  .btn {
+    font-size: 4vw;
+    padding: 2vw 4vw;
+    border-radius: 2vw;
+    border: 1vw solid #fff;
+    margin-top: 2vw;
+  }
+
+  .email,
+  .email h6 {
+    font-size: 18px;
+  }
+
+  /*---------------------- website managemnet -------------
+--------------------*/
+
+  .hero-section {
+    width: 100%;
+    height: 145vw;
+    padding: 10vw 10vw;
+    background: linear-gradient(#0000004f, #0000006d),
+      url(../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+
+  .hero-section nav {
+    width: 100%;
+    padding: 2.7vw 0vw;
+    border-radius: 1.5vw;
+    background: rgba(255, 255, 255, 0.43);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hero-section .left {
+    display: flex;
+    align-items: center;
+    /* gap: 2vw; */
+    justify-content: space-evenly;
+    width: 50%;
+  }
+
+  .hero-section .left a {
+    color: #000;
+    line-height: 120%;
+    font-size: 2.7vw;
+  }
+
+  .hero-section .center {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -7vw;
+  }
+
+  .hero-section .center img {
+    position: relative;
+    width: 10vw;
+  }
+
+  /*------------------------ about-us ----------------
+-------------------*/
+
+  .about {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 7vw;
+    align-items: center;
+    padding: 7vw;
+    padding-top: 41vw;
+    background: url(../images/about-bg.png);
+    background-size: cover;
+    background-position: top center;
+    margin-top: -35vw;
+  }
+
+  .about .left {
+    width: 90%;
+    text-align: center;
+  }
+
+  .about .left img {
+    width: 80%;
+  }
+
+  .about .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    align-items: center;
+  }
+
+  .about .right p {
+    color: #000;
+  }
+
+  /*---------------- tokenomics -------------
+------------------*/
+
+  .tokenomics {
+    width: 100%;
+    height: auto;
+    background: url(../images/token-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: scroll;
+    padding: 15vw;
+    padding-bottom: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw;
+    margin-top: -1vw;
+  }
+
+  .tokenomics .content {
+    width: 70%;
+    display: flex;
+    height: auto;
+    flex-direction: column-reverse;
+    gap: 3vw;
+    justify-content: space-between;
+    padding-top: 3vw;
+  }
+
+  .tokenomics .content .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #79c2fa;
+    border-radius: 1.5vw;
+    border: 0.7vw solid #fff;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 3vw;
+  }
+
+  .tokenomics .content .left:nth-child(2) {
+    background: #f8d789;
+  }
+
+  .tokenomics .content .left .text {
+    width: 100%;
+    padding-left: 0%;
+    text-align: center;
+  }
+
+  .tokenomics .content .left .text p {
+    font-size: 4vw;
+    margin-top: 1vw;
+  }
+
+  .tokenomics .content .left .right {
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .tokenomics .content .left .right img {
+    width: 100%;
+  }
+
+  .tokenomics .content .left:nth-child(1) .right img {
+    margin-bottom: -2.5vw;
+  }
+
+  .tokenomics .content .left:nth-child(2) .right img {
+    position: relative;
+    bottom: -2vw;
+  }
+
+  .tokenomics .box {
+    margin-top: 2vw;
+    width: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ee807b;
+    border-radius: 1.5vw;
+    border: 0.7vw solid #fff;
+    padding: 1vw 2vw;
+    padding-top: 3vw;
+  }
+
+  .tokenomics .box .left {
+    width: 40%;
+    padding-left: 5%;
+  }
+
+  .tokenomics .box .left h3 {
+    font-size: 4vw;
+  }
+
+  .tokenomics .box .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tokenomics .box .right img {
+    width: 100%;
+    margin-bottom: -4vw;
+  }
+
+  /*------------------------- roadmap ---------------
+--------------------*/
+
+  .roadmap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw;
+    padding: 5vw 12vw;
+  }
+
+  .roadmap .content {
+    width: 100%;
+    height: auto;
+    padding: 5vw 3vw;
+    border-radius: 2vw;
+    border: 0.7vw solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vw;
+  }
+
+  .roadmap .content .phase {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0vw;
+    justify-content: space-between;
+  }
+
+  .roadmap .content .phase:nth-child(4) .left img {
+    width: 27vw;
+  }
+
+  .roadmap .content .phase h6 {
+    font-size: 4vw;
+    text-align: center;
+    margin-bottom: 2vw;
+  }
+
+  .roadmap .content .phase .left {
+    width: 50%;
+    text-align: center;
+  }
+
+  .roadmap .content .phase .left img {
+    width: 50%;
+    margin-top: 0vw;
+    margin-right: 0vw;
+    position: relative;
+    z-index: 1000;
+    margin: 2vw 0;
+  }
+
+  .roadmap .content .phase .right {
+    width: 90%;
+    padding: 6vw 3vw;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .roadmap .content .phase .right li {
+    color: #fff;
+    line-height: 140%;
+  }
+
+  /*------------------------- contact ---------------
+--------------------*/
+
+  .join {
+    width: 100%;
+    height: auto;
+    padding: 5vw;
+    padding-top: 10vw;
+    padding-bottom: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    background: url(../images/contact-bg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+
+  .join p {
+    font-weight: 700;
+    font-size: 3.5vw;
+  }
+
+  .join .content {
+    padding: 1.5vw 3vw;
+    padding-bottom: 1vw;
+    background: #f0573b;
+    border-radius: 1vw;
+    display: flex;
+    align-items: center;
+    gap: 2.5vw;
+  }
+
+  .join .content a img {
+    width: 5vw;
+  }
+
+  /*---------------------------------- copyright --------------
+-----------------*/
+
+  .copy {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    background: #0b5079;
+    padding-bottom: 5vw;
+    padding-top: 2vw;
+  }
+
+  .copy img {
+    width: 13vw;
+    margin-top: -13vw;
+  }
+}
